@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/main.css">
+ 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  
+    <title>ChartJS - WEB Programozás I.</title>
+
+    <style>
+        table {
+            margin: 2rem auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px 20px;
+            border: 1px solid #333;
+            text-align: center;
+            cursor: pointer;
+        }
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+        canvas {
+            display: block;
+            margin: 2rem auto;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Web-Programozás-1 Előadás Házi feladat</h1>
+        <nav>
+            <a href="index.html">CRUD</a>
+            <a href="html5.html">HTML5</a>
+            <a href="chartjs.html" class="active">ChartJS</a>
+            <a href="ajax.html">AJAX</a>
+            <a href="oojs.html">OOJS</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 style="text-align: center;">Táblázat és Diagram</h1>
+
+        <table id="data-table">
+            <tbody>
+                <tr><td>12</td><td>28</td><td>3</td><td>12</td><td>43</td></tr>
+                <tr><td>23</td><td>24</td><td>65</td><td>18</td><td>16</td></tr>
+                <tr><td>4</td><td>2</td><td>7</td><td>10</td><td>18</td></tr>
+                <tr><td>59</td><td>12</td><td>14</td><td>54</td><td>20</td></tr>
+                <tr><td>53</td><td>27</td><td>24</td><td>75</td><td>23</td></tr>
+            </tbody>
+        </table>
+
+        <canvas id="line-chart" width="600" height="400"></canvas>
+    </main>
+
+    <my-footer />
+
+    <script>
+        const table = document.getElementById('data-table');
+        const ctx = document.getElementById('line-chart').getContext('2d');
+
+        const labels = ['1', '2', '3', '4', '5'];
+
+        let chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Kiválasztott sor adatai',
+                    data: [],
+                    fill: false,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true
+                    },
+                    title: {
+                        display: true,
+                        text: 'Kattints egy táblázatsorra a megjelenítéshez'
+                    }
+                }
+            }
+        });
+
+        table.querySelectorAll('tr').forEach(row => {
+            row.addEventListener('click', () => {
+                const values = Array.from(row.children).map(td => parseFloat(td.textContent));
+                chart.data.datasets[0].data = values;
+                chart.update();
+            });
+        });
+    </script>
+
+
+<footer>
+    <h1>Készítők:</h1>
+    <div class="creator-data">
+        <p>Juhász Dávid</p>
+        <p>FPMHJ4</p>
+    </div>
+    <div class="creator-data">
+        <p>Versics Ádám</p>
+        <p>NZXW18</p>
+    </div>
+</footer>
+</body>
+</html>

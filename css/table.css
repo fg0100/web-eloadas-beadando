@@ -32,7 +32,7 @@ label {
     font-weight: 500;
 }
 
-input, textarea, select {
+input, select {
 
     background-color: var(--surface);
     color: var(--text);
@@ -45,7 +45,7 @@ input, textarea, select {
 }
 
 
-input:focus, textarea:focus, select:focus {
+input:focus, select:focus {
     border-color: var(--primary); 
     outline: none;
     box-shadow: 0 0 0 3px rgba(79, 209, 197, 0.3);
