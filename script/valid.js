@@ -2,17 +2,7 @@
 window.onload = function() {
     loadInitialData()
     var table = document.getElementById("data-table");
-    for (var i = 1; i < table.rows.length; i++) {
-        let row = table.rows[i];
-
-        if (row.cells.length < 6) {
-            var actionsCell = row.insertCell(5);
-            actionsCell.innerHTML = `
-                <button onclick="editRow(this)">Szerkesztés</button>
-                <button onclick="deleteRow(this)">Törlés</button>
-            `;
-        }
-    }
+    
 };
 
 function loadInitialData() {
@@ -59,10 +49,14 @@ function loadInitialData() {
 
         var actionsCell = newRow.insertCell(5);
         actionsCell.innerHTML = `
-            <button class="edit-btn" onclick="editRow(this)">Szerkesztés</button>
-            <button class="delete-btn" onclick="deleteRow(this)">Törlés</button>
-        `;
+          <button onclick="editRow(this)"><i class="fas fa-edit"></i></button>
+          <button onclick="deleteRow(this)"><i class="fas fa-trash"></i></button> `;
     });
+
+    if (window.FontAwesome && FontAwesome.dom) {
+        FontAwesome.dom.i2svg();
+    }
+
 }
 
 
@@ -116,9 +110,10 @@ function validate() {
 
     var actionsCell = newRow.insertCell(5);
     actionsCell.innerHTML = `
-        <button onclick="editRow(this)">Szerkesztés</button>
-        <button onclick="deleteRow(this)">Törlés</button>
-    `;    
+    <button onclick="editRow(this)"><i class="fas fa-edit"></i></button>
+    <button onclick="deleteRow(this)"><i class="fas fa-trash"></i></button>
+`;
+  
 
     clearForm();
 }    

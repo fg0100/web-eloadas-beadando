@@ -1,2 +1,2 @@
 # web-eloadas-beadando
-WEB-programozás I. előadás beadamdó
+WEB-programozás I. előadás beadandó

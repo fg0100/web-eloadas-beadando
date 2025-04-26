@@ -32,17 +32,7 @@ body {
 main{
     padding-top: 80px;
 }
-/*
-body::after{
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-}*/
-    
+
 section {
     width: 90%;
     margin: 10px auto;

@@ -69,12 +69,11 @@ transition: background-color 0.3s, color 0.3s;
 }
 
 nav a.active {
-/*border-bottom: 4px solid var(--highlight);*/
 color: var(--surface);
 background-color: var(--primary);
 font-weight: bold;
 border-radius: 5px;
-/*választás*/
+
 }
 
 nav a:hover {
