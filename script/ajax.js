@@ -5,6 +5,7 @@ function $(id) {
     return document.getElementById(id);
 }
 
+
 function validateInput(name, height, weight) {
     if (!name || !height || !weight) {
         return "Minden mező kitöltése kötelező.";

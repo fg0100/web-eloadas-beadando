@@ -67,7 +67,7 @@ function drop(ev) {
     ev.target.appendChild(document.getElementById(data));
 }
 
-// Canvas rajzolás
+// Canvas rajzolásS
 window.onload = function () {
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
