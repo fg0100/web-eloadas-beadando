@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/table.css">
 
-    <title>Document</title>
+    <script src="script/valid.js" defer></script>
+
+
+    <title>Web-I-beadandó</title>
 </head>
 <body>
     <header>
         <h1>Web-Programozás-1 Előadás Házi feladat</h1>
         <nav>
-            <a href="index.html" class="active">Kezdőoldal</a>
+            <a href="index.html" class="active">Táblázat</a>
             <a href="html5.html">Html5</a>
             <a href="chartjs.html">ChartJs</a>
             <a href="ajax.html">AJAX</a>
@@ -19,15 +24,93 @@
         </nav>
     </header>
 
+    <main>
+      <section class="vertical-section" >
+          <h2>Ellenőrzött űrlap</h2>
+          <form>
+              <fieldset>
+                  <legend>Űrlap</legend> 
+
+                  <label for="name">Név</label>
+                  <input required type="text" id="name" name="name" placeholder="John Smith">
+
+                  <label for="age">Életkor</label>
+                  <input required type="number" id="age" name="age" placeholder="Add meg az életkorod">
+
+                  <label for="gender">Nem</label>
+                  <select required id="gender" name="gender">
+                      <option value="" disabled selected>-- Válassz egy lehetőséget --</option>
+                      <option value="male">Férfi</option>
+                      <option value="female">Nő</option>
+                      <option value="other">Egyéb</option>
+                  </select>
+
+                  <label for="email">Email</label>
+                  <input required type="email" id="email" name="email" placeholder="john@example.com">
+
+
+                  <label for="city">Város</label>
+                  <input required type="text" id="city" name="city"
+                      placeholder="Add meg a várost ahol élsz"></input>
+                 
+                  <input type="button" value="Submit" onclick="validate()">
+              </fieldset>
+          </form>
+      </section> 
+      <section class="vertical-section">
+          <h2>Adatok</h2>
+          <table id="data-table">
+              <tr>
+                  <th>Név</th>
+                  <th>Életkor</th>
+                  <th>Nem</th>
+                  <th>E-mail</th>
+                  <th>Város</th>
+              </tr>
+              <tr>
+                  <td>Ulfric Stormcloak</td>
+                  <td>45</td>
+                  <td>Férfi</td>
+                  <td>ulfric.stormcloak@tamriel.com</td>
+                  <td>Windhelm</td>
+              </tr>
+              <tr>
+                  <td>Lydia Stormblade</td>
+                  <td>28</td>
+                  <td>Nő</td>
+                  <td>lydia.stromblade@skyrimmail.com</td>
+                  <td>Whiterun</td>
+              </tr>
+              <tr>
+                  <td>Lucien Lachance</td>
+                  <td>42</td>
+                  <td>Férfi</td>
+                  <td>lucien.lachance@tamriel.com</td>
+                  <td>Cheydinhal</td>
+              </tr>
+              <tr>
+                  <td>Martin Septim</td>
+                  <td>38</td>
+                  <td>Férfi</td>
+                  <td>mmartin.septim@kvatch.com</td>
+                  <td>Kvatch</td>
+              </tr>
+          </table>
+      </section>
+  </main>
+
+
+
+
     <footer>
         <h1>Készítők:</h1>
-        <div class="creator-container">
-            <p class="creator-name">Juhász Dávid</p>
-            <p class="creator-code">FPMHJ4</p>
+        <div class="creator-data">
+            <p>Juhász Dávid</p>
+            <p>FPMHJ4</p>
         </div>
-        <div class="creator-container">
-            <p class="creator-name">Versics Ádám</p>
-            <p class="creator-code">NZXW18</p>
+        <div class="creator-data">
+            <p>Versics Ádám</p>
+            <p>NZXW18</p>
         </div>
     </footer>
 </body>
