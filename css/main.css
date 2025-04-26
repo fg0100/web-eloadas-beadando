@@ -33,16 +33,16 @@ main{
     padding-top: 80px;
 }
 
+
 section {
-    width: 90%;
-    margin: 10px auto;
-    min-height: 100vh;
+    /*
     display: flex;
     align-items: center;
-    justify-content: center;
+    
     box-sizing: border-box;
-    padding: 108px 0 108px 0;
-}
+    */
+    padding: 30px 0 0 100px;
+    }
 
 h1 {
     font-size: 100px;
@@ -57,7 +57,18 @@ p{
     text-decoration: none;
 
 }
+
 .vertical-section{
+    width: 90%;
+    margin: 10px auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    
+    padding: 108px 0 108px 0;
+
     color: var(--text);
     flex-direction: column;
     width: 70%;
