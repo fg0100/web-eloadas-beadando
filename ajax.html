@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+  
+  <link rel="stylesheet" href="css/header-footer.css">
+
+    <script src="script/html5.js"></script>
+
+    <title>AJAX - WEB Programozás I.</title>
+</head>
+<body>
+    <header>
+        <h1>Web-Programozás-1 Előadás Házi feladat</h1>
+        <nav>
+            <a href="index.html">CRUD</a>
+            <a href="html5.html">HTML5</a>
+            <a href="chartjs.html">ChartJS</a>
+            <a href="ajax.html" class="active">AJAX</a>
+            <a href="oojs.html">OOJS</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>AJAX Alkalmazás</h2>
+            <div>
+                <h3>Adatok lekérése</h3>
+                <button onclick="readData()">Adatok lekérése</button>
+                <div id="read-output"></div>
+                <div id="stats-output"></div>
+            </div>
+    
+            <hr>
+    
+            <div>
+                <h3>Új rekord létrehozása</h3>
+                <input type="text" id="create-name" placeholder="Név (max 30)">
+                <input type="text" id="create-height" placeholder="Magasság">
+                <input type="text" id="create-weight" placeholder="Súly">
+                <button onclick="createRecord()">Létrehozás</button>
+                <div id="create-feedback"></div>
+            </div>
+    
+            <hr>
+    
+            <div>
+                <h3>Rekord módosítása</h3>
+                <input type="text" id="update-id" placeholder="ID">
+                <button onclick="getDataForId()">Adatok betöltése</button>
+                <br><br>
+                <input type="text" id="update-name" placeholder="Név (max 30)">
+                <input type="text" id="update-height" placeholder="Magasság">
+                <input type="text" id="update-weight" placeholder="Súly">
+                <button onclick="updateRecord()">Frissítés</button>
+                <div id="update-feedback"></div>
+            </div>
+    
+            <hr>
+    
+            <div>
+                <h3>Rekord törlése</h3>
+                <input type="text" id="delete-id" placeholder="ID">
+                <button onclick="deleteRecord()">Törlés</button>
+                <div id="delete-feedback"></div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer>
+        <h1>Készítők:</h1>
+        <div class="creator-data">
+            <p>Juhász Dávid</p>
+            <p>FPMHJ4</p>
+        </div>
+        <div class="creator-data">
+            <p>Versics Ádám</p>
+            <p>NZXW18</p>
+        </div>
+    </footer>
+</body>
+</html>
+
