@@ -12,15 +12,19 @@
 
     <title>Web-I-beadandó</title>
 </head>
+<div id="overlay"></div>
+
 <body>
     <header>
         <h1>Web-Programozás-1 Előadás Házi feladat</h1>
         <nav>
             <a href="index.html" class="active">Táblázat</a>
+            <!--
             <a href="html5.html">Html5</a>
             <a href="chartjs.html">ChartJs</a>
             <a href="ajax.html">AJAX</a>
             <a href="oojs.html">OOJS</a>
+            -->
         </nav>
     </header>
 
@@ -53,7 +57,7 @@
                   <input required type="text" id="city" name="city"
                       placeholder="Add meg a várost ahol élsz"></input>
                  
-                  <input type="button" value="Submit" onclick="validate()">
+                  <input type="button" value="Save" onclick="validate()">
               </fieldset>
           </form>
       </section> 
@@ -66,40 +70,12 @@
                   <th>Nem</th>
                   <th>E-mail</th>
                   <th>Város</th>
+                  <th>Actions</th>
               </tr>
-              <tr>
-                  <td>Ulfric Stormcloak</td>
-                  <td>45</td>
-                  <td>Férfi</td>
-                  <td>ulfric.stormcloak@tamriel.com</td>
-                  <td>Windhelm</td>
-              </tr>
-              <tr>
-                  <td>Lydia Stormblade</td>
-                  <td>28</td>
-                  <td>Nő</td>
-                  <td>lydia.stromblade@skyrimmail.com</td>
-                  <td>Whiterun</td>
-              </tr>
-              <tr>
-                  <td>Lucien Lachance</td>
-                  <td>42</td>
-                  <td>Férfi</td>
-                  <td>lucien.lachance@tamriel.com</td>
-                  <td>Cheydinhal</td>
-              </tr>
-              <tr>
-                  <td>Martin Septim</td>
-                  <td>38</td>
-                  <td>Férfi</td>
-                  <td>mmartin.septim@kvatch.com</td>
-                  <td>Kvatch</td>
-              </tr>
+           
           </table>
       </section>
   </main>
-
-
 
 
     <footer>
@@ -113,5 +89,12 @@
             <p>NZXW18</p>
         </div>
     </footer>
+
+    <dialog id="error-dialog">
+      <h3>Hiba</h3>
+      <p id="dialog-msg"></p>
+      <button onclick="closeDialog()">OK</button>
+  </dialog>
+  
 </body>
 </html>
